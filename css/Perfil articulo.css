@@ -1,0 +1,244 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #404040;
+    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+}
+
+/*=====================================
+estilos de la utilidad
+Copiar esto
+=====================================*/
+.seccion-perfil-usuario .perfil-usuario-body,
+.seccion-perfil-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil-usuario-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#24de5c, transparent);
+    margin-bottom: 1.25rem;
+}
+
+.perfil-usuario-portada {
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 17rem;
+    background-image: linear-gradient(45deg, #217d8d, #16f6af);
+    border-radius: 0 0 20px 20px;
+    /*
+    background-image: url('http://localhost/multimedia/png/user-portada-3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    */
+}
+
+.perfil-usuario-portada .boton-portada {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 25px;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    cursor: pointer;
+}
+
+ .perfil-usuario-portada .boton-portada i {
+    margin-right: 1rem;
+}
+
+.perfil-usuario-avatar {
+    display: flex;
+    width: 180px;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+    border: 7px solid #FFFFFF;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    position: absolute;
+    bottom: -40px;
+    left: calc(50% - 90px);
+    z-index: 1;
+}
+
+.perfil-usuario-avatar img {
+    width: 100%;
+    position: relative;
+    border-radius: 50%;
+}
+
+.perfil-usuario-avatar .boton-avatar {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border: 0;
+    background-color: #ffffff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.perfil-usuario-body {
+    width: 70%;
+    position: relative;
+    max-width: 750px;
+}
+
+.perfil-usuario-body .titulo {
+    display: block;
+    width: 100%;
+    font-size: 1.75em;
+    margin-bottom: 0.5rem;
+}
+
+.perfil-usuario-body .titulo label {
+    color: #000000;
+}
+
+.perfil-usuario-body .texto {
+    color: #848484;
+    font-size: 0.95em;
+}
+
+ .perfil-usuario-footer,
+.perfil-usuario-bio {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    background-color: #24b9de;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.perfil-usuario-bio {
+    margin-bottom: 1.25rem;
+    text-align: center;
+    margin-top: 70px;
+}
+
+
+#commentsArea {
+    margin-top: 20px;
+}
+
+.rating i {
+    color: #e2dfd6; /* Cambiado a color gris por defecto */
+    cursor: pointer;
+}
+
+.rating i:hover,
+.rating i.active {
+    color: #ffdd00; /* Color dorado al pasar el mouse o cuando están activas */
+}
+
+ .redes-sociales .boton-redes+.boton-redes {
+    margin-top: .5rem;
+}
+
+#idFin{
+    color: rgb(134, 135, 136);   
+    flex-wrap: nowrap;
+    position: fixed;
+    text-align: center;
+    
+
+}
+
+/* Estilos para el carrusel */
+#carrusel {
+    top: 50px;
+    width: 65%;
+    height: 45%;
+    border: 3px solid #24b9de;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+/* Estilos para las imágenes dentro del carrusel */
+#carrusel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; /* Color de las flechas */
+    background-size: 100%, 100%; /* Asegura que las flechas ocupen todo el icono */
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Estilos para el carrusel de videos */
+#carruselVideo {
+    top: 30px;
+    width: 80%;
+    height: 70%;
+    border: 3px solid #24b9de;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 0 2px;
+    background-color: #ccc;
+}
+
+.rating label:before {
+    content: '\2605';
+    font-size: 50px;
+    color: #ddd;
+    display: block;
+}
+
+.rating input[type="radio"]:checked ~ label:before {
+    color: #ffcc00;
+}
+
+.rating label:hover:before,
+.rating label:hover ~ label:before {
+    color: #ffcc00;
+}
+
+#areaComentarios h1 {
+    text-align: center;
+}
+
+#no-results {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -1,0 +1,34 @@
+body {
+    /* Establecer un degradado de azul (#007bff) a blanco (#ffffff) de arriba a abajo */
+    background-image: linear-gradient(to bottom, #007bff, #ffffff);
+    /* Esto asegura que el degradado se extienda por todo el cuerpo de la página */
+    height: 100vh; /* altura al 100% del viewport */
+    margin: 0; /* Eliminar el margen por defecto del body */
+    display: flex;
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+}
+
+/* Estilos adicionales para el contenido */
+.container {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+h1, p {
+    text-align: center;
+}
+.cta-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.cta-button:hover {
+    background-color: #0056b3;
+}

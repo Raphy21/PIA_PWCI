@@ -1,0 +1,98 @@
+#formLista{
+    background-color: rgb(235, 245, 255);
+    flex-wrap: nowrap;
+    position: relative;
+    text-align: center;
+    margin: 50px auto;
+    margin-top: 120px;
+    width: 40%;
+    min-width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+body{
+    background-color: rgb(235, 245, 255);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1{
+    color: #014978;
+    font-weight: bold;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.nombreCompleto {
+    display: flex;
+    width: 100%;
+    height: 5%;
+}
+
+.nombre, .apellidos{
+    width: calc(50%);
+}
+
+#carrusel {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+}
+
+#btnCargaImagen {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 160px;
+}
+#btnCargaImagen::-webkit-file-upload-button {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#btnCargaImagen:hover::-webkit-file-upload-button {
+    background-color: #0162c9;
+    color: white;
+}
+
+#btnEliminarImagen {
+    margin-bottom: 12px;
+}
+
+#btnGuardar {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#btnGuardar:hover {
+    background-color: #0162c9;
+    color: white;
+}
+  
+#idFin {
+    position: relative;
+}

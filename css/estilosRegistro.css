@@ -1,0 +1,95 @@
+body{
+    background-color: rgb(141, 140, 140);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#idInicio{
+    background-color: #3498db;
+    color: white;   
+    text-align: center;
+    padding: 20px 20px 10px 8px;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    float: left;
+}
+nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+nav a:hover {
+    background-color: #0162c9;
+    color: #ffffff;
+}
+
+#idFondo{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#idContenido {
+    background-color: rgb(235, 245, 255);
+    flex-wrap: nowrap;
+    position: relative;
+    text-align: center;
+    margin: 50px auto;
+    margin-top: 180px;
+    width: 40%;
+    min-width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+#foto{
+    width: 100%;
+    max-width: 350px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#contenedorImagen {
+    width: 255px;
+    height: 255px;
+    margin: 10px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagenSeleccionada {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-check label.btn {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+.form-check label.btn:hover {
+    background-color: #0162c9;
+}
+.form-check input[type="radio"]:checked + label.btn {
+    background-color: #0162c9;
+}
+
+#idFin {
+    position: relative;
+}

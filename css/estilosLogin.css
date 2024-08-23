@@ -1,0 +1,105 @@
+  body {
+    background-image: url("../recursos/landingPage.jpg");
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+  }
+  
+  #idInicio {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px 20px 10px 20px;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  }
+  
+  #idFondo {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #idContenido {
+    background-color: rgba(235, 245, 255, 0.8);
+    flex-wrap: nowrap;
+    position: relative;
+    text-align: center;
+    margin: 50px auto;
+    width: 40%;
+    min-width: 350px;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  } 
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#botonRegistrarse, #botonIniciarSesion {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+a:hover {
+    background-color: #2882be;
+    color: #ffffff;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0162c9;
+}
+
+.welcome-message {
+  color: black;
+  font-weight: bold;
+  background-color: rgba(240, 240, 240, 0.8);
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  margin: 0px 30px;
+}
+
+.padded-container {
+  padding-left: 20px; /* Ajusta el margen izquierdo */
+  padding-right: 150px; /* Ajusta el margen derecho */
+}
+
+h2{
+  color: #21628d;
+}
+
+.iniciar-sesion{
+  color: #0162c9;
+}
+
+.registrarte{
+  color: #2882be;
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
+       <meta name="viewport" content="width=device-width, initial-scale=1">        
+       <title>Crear publicación</title>        
+       <link rel="stylesheet" href="css/bootstrap.min.css"> 
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
+       <link rel="stylesheet" href="css/navbarFooter.css"> 
+       <link rel="stylesheet" href="css/estilosCrearPublicacion.css">          
+   </head>
+    <body id="idFondo">        
+        <div id="idNav">
+            <nav class="navbar navbar-expand-lg navbar-light shadow-lg p-3 mb-5 fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" id="enlaceTitular" href="dashboard.html">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="crearPublicacion.html">Crear Publicación</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="pago.html">Carrito</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="PerfilPublico.html">Mi Perfil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="cotizacion.html">Cotización</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="aprobacionProductos.html">Revision de Articulos</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle black-text" href="#" id="filtroBusqueda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Consultas
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="filtroBusqueda">
+                                    <li><a class="dropdown-item black-text" href="consultaPedidos.html">Pedidos</a></li>
+                                    <li><a class="dropdown-item black-text" href="consultaVentas.html">Ventas</a></li>
+                                </ul>
+                            </li>    
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html?accion=2" tabindex="-1" aria-disabled="true">Cerrar Sesión</a>
+                            </li>                
+                        </ul>                   
+                        <form class="d-flex" id="formularioBusqueda" action="busquedaServlet" method="POST">
+                            <input class="form-control me-2" id="inputBuscador" type="search" placeholder="Escribe algo..." aria-label="Search" required>
+                            <div class="dropdown me-2">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="filtroBusqueda" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Filtro de búsqueda
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="opcionesAvanzadas">
+                                    <li>
+                                        <div class="mb-3">
+                                            <label for="precioMin" class="form-label">Precio mínimo</label>
+                                            <input type="text" class="form-control" id="precioMin" placeholder="0">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="precioMax" class="form-label">Precio máximo</label>
+                                            <input type="text" class="form-control" id="precioMax" placeholder="∞">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <select class="form-select" id="campoCategoria" aria-label="Categoría">
+                                            <option selected disabled value="">Categorias</option>
+                                        </select>                                        
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <select class="form-select" id="campoEstrellas" aria-label="Calificación">
+                                            <option value="">Calificación</option>
+                                            <option value="1">1 Estrella</option>
+                                            <option value="2">2 Estrellas</option>
+                                            <option value="3">3 Estrellas</option>
+                                            <option value="4">4 Estrellas</option>
+                                            <option value="5">5 Estrellas</option>
+                                        </select>
+                                    </li>
+                                    <br>
+                                    <!-- <li>
+                                        <select class="form-select" id="campoPopular" aria-label="Más o Menos Vendidos">
+                                            <option value="">Ventas</option>
+                                            <option value="mas-vendidos">Más Vendidos</option>
+                                            <option value="menos-vendidos">Menos Vendidos</option>
+                                        </select>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <button id="btnBuscar" type="submit">Buscar</button>                      
+                        </form>     
+                    </div>
+                </div>
+            </nav>
+        </div>
+       <div class="container" id="idContenido">
+            <h1 class="text-center">Nueva Publicación</h1>
+            <form id="formNuevaPublicacion" action="nuevaPublicacionServlet" method="POST" enctype="multipart/form-data">
+                <div class="container"> 
+                    <!--Carrusel-->
+                    <input type="file" accept="image/*" id="btnCargaImagen">
+                    <button type="button" class="btn btn-danger mt-2" id="btnEliminarImagen">Eliminar Imagen</button>
+
+                    <div id="carrusel" class="carousel slide" data-ride="carousel">
+                        
+                        <div class="carousel-inner" id="contenidoCarrusel">
+                        <!-- Las imágenes se agregan aquí -->
+                        </div>
+                        
+                        <a class="carousel-control-prev" href="#carrusel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carrusel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                        </a>
+
+                    </div>
+                </div>
+                <br>
+                <!--Nombre--> 
+                <div class="row">
+                    <div class="col">
+                        <label for="validationCustom01" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="campoNombre" name="fnombreProducto" placeholder="Ingresa un nombre" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                </div>
+                <div class="row">                    
+                    <div class="col">
+                        <label for="validationCustom02" class="form-label">Descripción</label>
+                        <input type="text" class="form-control" id="campoDescripcion" name="fdescripcionProducto" placeholder="Ingresa una descripción" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>                    
+                </div>                
+
+                <div class="container mt-5"> 
+                    <!--Carrusel-->
+                    <input type="file" accept="video/*" id="btnCargaVideo">
+                    <button type="button" class="btn btn-danger mt-2" id="btnEliminarVideo">Eliminar Video</button>
+
+                    <div id="carruselVideo" class="carousel slide" data-ride="carousel">
+                        
+                        <div class="carousel-inner" id="contenidoCarruselVideo">
+                        <!-- Los videos se agregan aquí -->
+                        </div>
+                        
+                        <a class="carousel-control-prev" href="#carruselVideo" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carruselVideo" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!--Categoria-->
+                <div class="row">
+                    <div class="col">
+                        <label for="validationCustom04" class="form-label">Categoría</label>
+                        
+                        <input type="text" id="inputNuevaCategoria" name="fNuevaCategoria" class="form-control" placeholder="Escribe el nombre de una nueva categoría">
+                        <input type="text" id="inputDescripcionCategoria" name="fDescCategoria" class="form-control mt-2" placeholder="Escribe una descripción para la nueva categoría">
+                        <button type="button" class="btn btn-primary mt-2" id="btnCrearCategoria">Crear Categoría</button>
+
+                        <br>
+
+                        <select class="form-select mt-2" id="ListadoCategorias" name="fcategoria" required>
+                            <option selected disabled value="">Selecciona una categoría</option>
+                            <!-- Las categorías se agregan aquí -->
+                        </select>
+
+                        <button type="button" class="btn btn-danger mt-2" id="btnEliminarCategoria">Eliminar Categoría</button>
+                        
+                    </div>
+                </div>
+
+                <label for="opcionesModo" class="form-label mt-4">Venta o Cotización</label>
+                <br>
+                <input type="radio" class="btn-check" name="opcionesModo" id="opcionVenta" autocomplete="off" checked>
+                <label class="btn btn-secondary" for="opcionVenta">Venta</label>
+
+                <input type="radio" class="btn-check" name="opcionesModo" id="opcionCotizacion" autocomplete="off">
+                <label class="btn btn-secondary" for="opcionCotizacion">Cotización</label>  
+
+                <!--Precio-->
+                <div class="col">
+                    <label for="cost">Precio</label>
+                    <input type="text" id="campoPrecio" class="form-control" placeholder="Escribe un precio para el producto" required>
+                </div>
+                <!--Inventario-->
+                <div class="col">
+                    <label for="cost">Cantidad Disponible</label>
+                    <input type="number" id="campoCantidad" class="form-control" placeholder="Escribe el número de unidades disponibles" required>
+                </div>
+                <hr> <!-- Separador -->	
+                <!--Boton-->
+                <div class="text-center">
+                    <div class="col-12">                            
+                        <div class="text-center">
+                            <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Crear publicación</button>
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <footer id="idFin">
+            <h5>LMAD - BDM</h5>
+            <p>1600998 Kevin Martin Hernandez Gonzalez</p>
+            <p>1863450 Gabriel Alonso Sanabria Cervantes</p>    
+        </footer>
+        
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/crearPublicacion.js"></script>
+        <script src="js/buscarArticulo.js"></script>
+   </body>
+</html>

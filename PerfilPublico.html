@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
+       <meta name="viewport" content="width=device-width, initial-scale=1">        
+       <title>Perfil de usuario</title>        
+       <link rel="stylesheet" href="css/bootstrap.min.css"> 
+       <link rel="stylesheet" href="css/navbarFooter.css">      
+       <link rel="stylesheet" href="css/estilosPerfilUsuario.css"> 
+   </head>
+   <body id="idFondo">        
+    <div id="idNav">
+        <nav class="navbar navbar-expand-lg navbar-light shadow-lg p-3 mb-5 fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" id="enlaceTitular" href="dashboard.html">Dashboard</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="crearPublicacion.html">Crear Publicación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="pago.html">Carrito</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="PerfilPublico.html">Mi Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="cotizacion.html">Cotización</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="aprobacionProductos.html">Revision de Articulos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle black-text" href="#" id="filtroBusqueda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Consultas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="filtroBusqueda">
+                                <li><a class="dropdown-item black-text" href="consultaPedidos.html">Pedidos</a></li>
+                                <li><a class="dropdown-item black-text" href="consultaVentas.html">Ventas</a></li>
+                            </ul>
+                        </li>    
+                        <li class="nav-item">
+                          <a class="nav-link active" href="index.html?accion=2" tabindex="-1" aria-disabled="true">Cerrar Sesión</a>
+                      </li>                
+                    </ul>                   
+                    <form class="d-flex" id="formularioBusqueda" action="busquedaServlet" method="POST">
+                        <input class="form-control me-2" id="inputBuscador" type="search" placeholder="Escribe algo..." aria-label="Search" required>
+                        <div class="dropdown me-2">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="filtroBusqueda" data-bs-toggle="dropdown" aria-expanded="false">
+                                Filtro de búsqueda
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="opcionesAvanzadas">
+                                <li>
+                                    <div class="mb-3">
+                                        <label for="precioMin" class="form-label">Precio mínimo</label>
+                                        <input type="text" class="form-control" id="precioMin" placeholder="0">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="precioMax" class="form-label">Precio máximo</label>
+                                        <input type="text" class="form-control" id="precioMax" placeholder="∞">
+                                    </div>
+                                </li>
+                                <li>
+                                    <select class="form-select" id="campoCategoria" aria-label="Categoría">
+                                        <option selected disabled value="">Categorias</option>
+                                    </select>                                        
+                                </li>
+                                <br>
+                                <li>
+                                    <select class="form-select" id="campoEstrellas" aria-label="Calificación">
+                                        <option value="">Calificación</option>
+                                        <option value="1">1 Estrella</option>
+                                        <option value="2">2 Estrellas</option>
+                                        <option value="3">3 Estrellas</option>
+                                        <option value="4">4 Estrellas</option>
+                                        <option value="5">5 Estrellas</option>
+                                    </select>
+                                </li>
+                                <br>
+                                <!-- <li>
+                                    <select class="form-select" id="campoPopular" aria-label="Más o Menos Vendidos">
+                                        <option value="">Ventas</option>
+                                        <option value="mas-vendidos">Más Vendidos</option>
+                                        <option value="menos-vendidos">Menos Vendidos</option>
+                                    </select>
+                                </li> -->
+                            </ul>
+                        </div>
+                        <button id="btnBuscar" type="submit">Buscar</button>                      
+                    </form>     
+                </div>
+            </div>
+        </nav>
+    </div>
+       <div class="container" id="idContenido">
+            <form id="formRegistro" action="Controllers/PerfilController.php" method="POST">
+                <div class="container"> 
+
+                    <!--Toggle de edición de perfil-->
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="form-check form-switch form-switch-lg">
+                          <input class="form-check-input" type="checkbox" id="toggleEditar">
+                          <label class="form-check-label" for="toogleEditar">Editar</label>
+                        </div>
+                      </div>  
+
+                    <h1 id="tituloPerfil"></h1>
+                    <h3>Imagen de Perfil:</h3>       
+                    <div class="form-group">
+                        <div id="contenedorImagen">
+                            <img id="imagenSeleccionada" class="rounded mx-auto d-block" src="recursos/icon-default.png">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control-file" id="foto" accept="image/*">
+                    </div>
+                </div>
+
+                <!--Texto de descripción del perfil-->
+                <div class="row" id="contenedorDescripcion">
+                    <div class="col">
+                        <h3>Descripción:</h3>
+                        <ul id="listaDescripcion"></ul>
+                        <h2 id="advertenciaDescripcion">¡Este perfil es privado!</h2>
+                    </div>
+                </div>
+
+                <!--Contenedor de los campos con información del perfil-->
+                <div id="contenedorCampos">
+                
+                    <!--Nombre--> 
+                    <div class="row">
+                        <div class="col">
+                            <label for="validationCustom01" class="form-label">Nombre(s)</label>
+                            <input type="text" class="form-control" id="campoNombre" name="fnombre" placeholder="Ingresa tu Nombre" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+                    <!--Apellidos-->
+                    <div class="row">
+                        
+                        <div class="col">
+                            <label for="validationCustom02" class="form-label">Apellido Paterno</label>
+                            <input type="text" class="form-control" id="campoApePat" name="fapellidoPat" placeholder="Ingresa tu apellido paterno" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="validationCustom02" class="form-label">Apellido Materno</label>
+                            <input type="text" class="form-control" id="campoApeMat" name="fapellidoMat" placeholder="Ingresa tu apellido materno" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sexo en un combobox-->
+                    <div class="row">
+                        <div class="col">
+                            <label for="validationCustom04" class="form-label">Sexo</label>
+                            <select class="form-select" id="campoSexo" name="fsexo" required>
+                                <option selected disabled value="">Selecciona tu sexo</option>
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Fecha de Nacimiento-->
+                    <div class="row">
+                        <div class="col">
+                            <label for="validationCustomUsername" class="form-label">Fecha de Nacimiento</label>
+                            <div class="input-group has-validation">
+                                <input type="date" class="form-control" id="campoFechaNacimiento" name="ffechanacimiento" aria-describedby="inputGroupPrepend" required>
+                            </div>
+                        </div>
+
+                        <label for="opcionesVisibilidad" class="form-label">Visibilidad de Usuario</label>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="btn-check" name="opcionesVisibilidad" id="opcionPublica" autocomplete="off" checked>
+                                <label class="btn btn-secondary" for="opcionPublica">Publica</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="btn-check" name="opcionesVisibilidad" id="opcionPrivada" autocomplete="off">
+                                <label class="btn btn-secondary" for="opcionPrivada">Privada</label>
+                            </div>
+                        </div>
+
+                        <label for="opcionesRol" class="form-label">Rol del Usuario</label>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="btn-check" name="opcionesRol" id="opcionVendedor" autocomplete="off" checked>
+                                <label class="btn btn-secondary" for="opcionVendedor">Vendedor</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="btn-check" name="opcionesRol" id="opcionCliente" autocomplete="off">
+                                <label class="btn btn-secondary" for="opcionCliente">Cliente</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="btn-check" name="opcionesRol" id="opcionAdministrador" autocomplete="off">
+                                <label class="btn btn-secondary" for="opcionAdministrador">Administrador</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Email-->
+                    <div class="col">
+                        <label for="validationCustom03" class="form-label">Email</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            <input type="email" class="form-control" id="campoCorreo" name="femail" aria-describedby="inputGroupPrepend" placeholder="Ingresa tu correo electrónico" required>
+                            <div class="invalid-feedback">
+                            Please choose a username.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Usuario-->
+                    <div class="col">
+                        <label for="validationCustom02" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" id="campoNombreUsuario" name="fusuario" placeholder="Ingresa un nombre de usuario" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <!--Password-->
+                    <div class="col">
+                        <label for="validationCustom05" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="campoContrasena" name="fcontra" placeholder="********" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                    <hr> <!-- Separador -->	
+                    <!--Boton-->
+                    <div class="text-center">
+                        <div class="col-12">                            
+                            <div class="text-center">
+                                <div class="col-12">
+                                    <button class="btn btn-primary" type="submit">Guardar cambios</button>
+                                </div>
+                            </div>                       
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="container" id="seccionProductos">
+            <div id="container">
+                <h1 id="tituloSeccionProductos">Productos publicados</h1>
+                <div class="card-container" id="card-container"></div>
+                <div>
+                    <button id="btnAtras">Atrás</button>
+                    <button id="btnSiguiente">Siguiente</button>
+                </div>
+                <div id="no-results" style="display: none;">No se encontraron Productos.</div>
+            </div>
+        </div>
+
+        <div class="container" id="idDivListas">
+            <div class="container"> 
+                <h1>Listas del usuario</h1>
+            </div>
+
+            <table class="table" id="tablaListasMostrable">
+
+                <div id="no-lists" style="display: none;">No se encontraron Listas.</div> 
+
+                <!--Aquí se crea la estructura de la tabla y su contenido (a traves de js)-->
+            </table>
+        
+            <table class="table" id="tablaListasEditable">
+                <!--Aquí se crea la estructura de la tabla y su contenido (a traves de js)-->
+            </table>
+
+            <div class="text-center">
+                <div class="col-12">                            
+                    <div class="text-center">
+                        <div class="col-12">
+                        <button class="btn btn-primary" id="btnNuevaLista">Crear nueva lista</button>
+                        </div>
+                    </div>                       
+                </div>
+            </div>
+        </div>
+
+        <footer id="idFin">
+            <h5>LMAD - BDM</h5>
+            <p>1600998 Kevin Martin Hernandez Gonzalez</p>
+            <p>1863450 Gabriel Alonso Sanabria Cervantes</p>    
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/perfilUsuario.js"></script>
+        <script src="js/buscarArticulo.js"></script>
+   </body>
+</html>

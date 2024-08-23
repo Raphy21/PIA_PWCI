@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
+       <meta name="viewport" content="width=device-width, initial-scale=1">        
+       <title>Registro</title>        
+       <link rel="stylesheet" href="css/bootstrap.min.css"> 
+       <link rel="stylesheet" href="css/navbarFooter.css"> 
+       <link rel="stylesheet" href="css/estilosRegistro.css">       
+   </head>
+   <body id="idFondo">        
+        <header id="idInicio" class="fixed-top">         
+            <h1>Registro de usuario</h1>
+            <nav>
+                <div id="botonRegresar">
+                    <a href="index.html">❮ Regresar al login</a>
+                </div>
+            </nav>
+        </header>
+       <div class="container" id="idContenido">
+            <form id="formRegistro" action="Controllers/RegistroController.php" method="POST" enctype="multipart/form-data">
+                <div class="container"> 
+                    <h3>Imagen de Perfil</h3>       
+                    <div class="form-group">
+                        <div id="contenedorImagen">
+                            <img id="imagenSeleccionada" class="rounded mx-auto d-block" src="recursos/icon-default.png">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control-file" id="foto" accept="image/*">
+                    </div>
+                </div>
+                
+                <!--Nombre--> 
+                <div class="row">
+                    <div class="col">
+                        <label for="validationCustom01" class="form-label">Nombre(s)</label>
+                        <input type="text" class="form-control" id="campoNombre" name="fnombre" placeholder="Ingresa tu Nombre" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                </div>
+                <!--Apellidos-->
+                <div class="row">
+                    
+                    <div class="col">
+                        <label for="validationCustom02" class="form-label">Apellido Paterno</label>
+                        <input type="text" class="form-control" id="campoApePat" name="fapellidoPat" placeholder="Ingresa tu apellido paterno" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="validationCustom02" class="form-label">Apellido Materno</label>
+                        <input type="text" class="form-control" id="campoApeMat" name="fapellidoMat" placeholder="Ingresa tu apellido materno" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                </div>
+                <!--Sexo en un combobox-->
+                <div class="row">
+                    <div class="col">
+                        <label for="validationCustom04" class="form-label">Sexo</label>
+                        <select class="form-select" id="campoSexo" name="fsexo" required>
+                            <option selected disabled value="">Selecciona tu sexo</option>
+                            <option>Masculino</option>
+                            <option>Femenino</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid state.
+                        </div>
+                    </div>
+                </div>
+
+                <!--Fecha de Nacimiento-->
+                <div class="row">
+                    <div class="col">
+                        <label for="validationCustomUsername" class="form-label">Fecha de Nacimiento</label>
+                        <div class="input-group has-validation">
+                            <input type="date" class="form-control" id="campoFechaNacimiento" name="ffechanacimiento" aria-describedby="inputGroupPrepend" required>
+                        </div>
+                    </div>
+
+                    <label for="opcionesVisibilidad" class="form-label">Visibilidad de Usuario</label>
+                    <div class="col">
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="btn-check" name="opcionesVisibilidad" id="opcionPublica" autocomplete="off" checked>
+                            <label class="btn btn-secondary" for="opcionPublica">Publica</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="btn-check" name="opcionesVisibilidad" id="opcionPrivada" autocomplete="off">
+                            <label class="btn btn-secondary" for="opcionPrivada">Privada</label>
+                        </div>
+                    </div>
+
+                    <label for="opcionesRol" class="form-label">Rol del Usuario</label>
+                    <div class="col">
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="btn-check" name="opcionesRol" id="opcionVendedor" autocomplete="off" checked>
+                            <label class="btn btn-secondary" for="opcionVendedor">Vendedor</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="btn-check" name="opcionesRol" id="opcionCliente" autocomplete="off">
+                            <label class="btn btn-secondary" for="opcionCliente">Cliente</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="btn-check" name="opcionesRol" id="opcionAdministrador" autocomplete="off">
+                            <label class="btn btn-secondary" for="opcionAdministrador">Administrador</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Email-->
+                <div class="col">
+                    <label for="validationCustom03" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="email" class="form-control" id="campoCorreo" name="femail" aria-describedby="inputGroupPrepend" placeholder="Ingresa tu correo electrónico" required>
+                        <div class="invalid-feedback">
+                        Please choose a username.
+                        </div>
+                    </div>
+                </div>
+
+                <!--Usuario-->
+                <div class="col">
+                    <label for="validationCustom02" class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="campoNombreUsuario" name="fusuario" placeholder="Ingresa un nombre de usuario" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <!--Password-->
+                <div class="col">
+                    <label for="validationCustom05" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="campoContrasena" name="fcontra" placeholder="********" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid zip.
+                    </div>
+                </div>
+                <hr> <!-- Separador -->	
+                <!--Boton-->
+                <div class="text-center">
+                    <div class="col-12">                            
+                        <div class="text-center">
+                            <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Crear usuario</button>
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <footer id="idFin">
+            <h5>LMAD - BDM</h5>
+            <p>1600998 Kevin Martin Hernandez Gonzalez</p>
+            <p>1863450 Gabriel Alonso Sanabria Cervantes</p>    
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/registrarUsuario.js"></script>
+   </body>
+</html>
