@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #3498db;
+    background-color: #24a38c;
 }
 
 body{
@@ -67,8 +67,9 @@ body{
 }
 
 #idFin {
-    position: relative;
-    background-color: #014978;
+    
+    position: fixed;
+    background-color: #1d8c76;
     color: white;
     text-align: center;
     width: 100%;

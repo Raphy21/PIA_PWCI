@@ -54,5 +54,5 @@ input[type="submit"]:hover {
 }
 
 #idFin{
-    position: relative;
+    position: fixed;
 }

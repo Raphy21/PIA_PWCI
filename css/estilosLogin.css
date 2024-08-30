@@ -1,12 +1,12 @@
   body {
-    background-image: url("../recursos/landingPage.jpg");
+    background-image: url("../recursos/2705164.jpg");
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
   }
   
   #idInicio {
-    background-color: #3498db;
+    background-color: #24a38c;
     color: white;
     text-align: center;
     padding: 20px 20px 10px 20px;
