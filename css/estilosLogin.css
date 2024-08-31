@@ -1,5 +1,5 @@
   body {
-    background-image: url("../recursos/2705164.jpg");
+    background-image: url("../recursos/mobile-phone-represent-of-front-of-shop-store-shopping-online-on-website-or-mobile-application-concept-marketing-and-digital-marketing-free-vector.jpg");
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -48,7 +48,7 @@
 a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #24a38c;
     color: #ffffff;
     text-decoration: none;
     border: none;
@@ -56,14 +56,14 @@ a {
     cursor: pointer;
 }
 a:hover {
-    background-color: #2882be;
+    background-color: #1d8c76;
     color: #ffffff;
 }
 
 button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #24a38c;
     color: #ffffff;
     text-decoration: none;
     border: none;
@@ -71,7 +71,7 @@ button {
     cursor: pointer;
 }
 button:hover {
-    background-color: #0162c9;
+    background-color: #1d8c76;
 }
 
 .welcome-message {
@@ -92,14 +92,16 @@ button:hover {
   padding-right: 150px; /* Ajusta el margen derecho */
 }
 
+
+
 h2{
-  color: #21628d;
+  color: #1d8c76;
 }
 
 .iniciar-sesion{
-  color: #0162c9;
+  color: #1d8c76;
 }
 
 .registrarte{
-  color: #2882be;
+  color: #1d8c76;
 }
