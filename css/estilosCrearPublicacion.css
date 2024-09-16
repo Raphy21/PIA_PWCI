@@ -1,20 +1,12 @@
-body{
+body {
     background-color: rgb(141, 140, 140);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
 }
 
-#idInicio{
-    background-color: #3498db;
-    color: white;   
-    text-align: center;
-    padding: 20px 20px 10px 8px;
-    width: 100%;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-}
-
-#idFondo{
+#idFondo {
     background-color: aliceblue;
     display: flex;
     justify-content: center;
@@ -22,31 +14,75 @@ body{
 }
 
 #idContenido {
-    background-color: rgb(235, 245, 255);
+    background-color: rgb(255, 255, 255);
     flex-wrap: nowrap;
     position: relative;
     text-align: center;
     margin: 50px auto;
-    margin-top: 120px;
-    width: 40%;
+    margin-top: 100px;
+    width: 30%; 
     min-width: 350px;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    padding: 40px 30px; /* Ajustar el padding para una mejor presentación */
+    border-radius: 15px; /* Bordes más sutiles */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    transition: box-shadow 0.3s ease; /* Animación suave */
+    padding-bottom: 100px;
+    
 }
 
-#foto{
-    width: 100%;
-    max-width: 350px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+
+
+#idContenido:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Efecto al pasar el mouse */
+}
+
+h1 {
+    color: #24a38c;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+input, textarea, select {
+    width: 90%; /* Ajustar el ancho de los campos */
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #24a38c;
+    outline: none;
+}
+
+button, .btn {
+    background-color: #24a38c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #1b806b;
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+#btnCargaImagen, #btnCargaVideo {
+    width: auto; /* Ajustar el ancho del botón para que se ajuste al contenido */
+    padding: 10px 20px;
 }
 
 #contenedorImagen {
-    width: 255px;
-    height: 255px;
-    margin: 10px auto;
+    width: 200px;
+    height: 200px;
+    margin: 15px auto;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -60,109 +96,53 @@ body{
     object-fit: cover;
 }
 
-.form-check label.btn {
-    background-color: #007BFF;
-    color: white;
-    cursor: pointer;
-}
-.form-check label.btn:hover {
-    background-color: #0162c9;
-}
-.form-check input[type="radio"]:checked + label.btn {
-    background-color: #0162c9;
-}
-
-#idFin {
-    position: fixed;
-}
-
-h1{
-    color: #014978;
-    font-weight: bold;
-    font-size: 45px;
-    margin-bottom: 20px;
-}
-
-#carrusel {
-    max-width: 400px;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    overflow: hidden;
-}
-
-.carousel-item img {
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: black;
-}
-
-#btnCargaImagen {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 160px;
-}
-#btnCargaImagen::-webkit-file-upload-button {
-    background-color: #007BFF;
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-#btnCargaImagen:hover::-webkit-file-upload-button {
-    background-color: #0162c9;
+#btnEliminarImagen, #btnEliminarVideo, #btnEliminarCategoria {
+    background-color: #ff4c4c;
     color: white;
 }
 
-#btnEliminarImagen {
-    margin-bottom: 12px;
+#btnEliminarImagen:hover, #btnEliminarVideo:hover, #btnEliminarCategoria:hover {
+    background-color: #e12e2e;
 }
 
-#carruselVideo {
-    max-width: 400px;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    overflow: hidden;
+
+@media (max-width: 768px) {
+    #idContenido {
+        width: 80%; /* Se ajusta el ancho para pantallas pequeñas */
+        padding: 20px; /* Reducir padding en móviles */
+        margin-top: 50px; /* Ajustar el margen superior */
+    }
+
+    h1 {
+        font-size: 30px; /* Reducir el tamaño del título */
+    }
+
+    input, textarea, select {
+        width: 95%; /* Más espacio en pantallas pequeñas */
+    }
+
+    button, .btn {
+        padding: 8px 16px; /* Reducir el padding de los botones */
+    }
 }
 
-.carousel-item video {
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
-}
+/* Media Query para pantallas aún más pequeñas, como teléfonos */
+@media (max-width: 480px) {
+    #idContenido {
+        width: 90%; /* Ajustar el ancho aún más */
+        padding: 15px; /* Menos padding para móviles */
+    }
 
-#btnCargaVideo {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 160px;
-}
-#btnCargaVideo::-webkit-file-upload-button {
-    background-color: #007BFF;
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-#btnCargaVideo:hover::-webkit-file-upload-button {
-    background-color: #0162c9;
-    color: white;
-}
+    h1 {
+        font-size: 25px; /* Título más pequeño para móviles */
+    }
 
-#btnEliminarVideo {
-    margin-bottom: 12px;
+    input, textarea, select {
+        width: 100%; /* Usar todo el espacio disponible */
+    }
+
+    button, .btn {
+        width: 100%; /* Hacer los botones más anchos para móviles */
+        padding: 10px; /* Botones más cómodos en móviles */
+    }
 }

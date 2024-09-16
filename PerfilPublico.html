@@ -17,7 +17,54 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <div class="mx-auto d-flex flex-grow-1 justify-content-center">
+                        <form class="d-flex" id="formularioBusqueda" action="busquedaServlet" method="POST">
+                            <input class="form-control me-2" id="inputBuscador" type="search" placeholder="Escribe algo..." aria-label="Search" required>
+                            <div class="dropdown me-2">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="filtroBusqueda" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Filtro de búsqueda
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="filtroBusqueda">
+                                    <li>
+                                        <div class="mb-3">
+                                            <label for="precioMin" class="form-label">Precio mínimo</label>
+                                            <input type="text" class="form-control" id="precioMin" placeholder="0">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="precioMax" class="form-label">Precio máximo</label>
+                                            <input type="text" class="form-control" id="precioMax" placeholder="∞">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <select class="form-select" id="campoCategoria" aria-label="Categoría">
+                                            <option selected disabled value="">Categorías</option>
+                                        </select>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <select class="form-select" id="campoEstrellas" aria-label="Calificación">
+                                            <option value="">Calificación</option>
+                                            <option value="1">1 Estrella</option>
+                                            <option value="2">2 Estrellas</option>
+                                            <option value="3">3 Estrellas</option>
+                                            <option value="4">4 Estrellas</option>
+                                            <option value="5">5 Estrellas</option>
+                                        </select>
+                                    </li>
+                                    <br>
+                                    <!-- <li>
+                                        <select class="form-select" id="campoPopular" aria-label="Más o Menos Vendidos">
+                                            <option value="">Ventas</option>
+                                            <option value="mas-vendidos">Más Vendidos</option>
+                                            <option value="menos-vendidos">Menos Vendidos</option>
+                                        </select>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <button id="btnBuscar" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="crearPublicacion.html">Crear Publicación</a>
                         </li>
@@ -31,7 +78,7 @@
                             <a class="nav-link active" aria-current="page" href="cotizacion.html">Cotización</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="aprobacionProductos.html">Revision de Articulos</a>
+                            <a class="nav-link active" aria-current="page" href="aprobacionProductos.html">Revisión de Artículos</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle black-text" href="#" id="filtroBusqueda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,56 +88,11 @@
                                 <li><a class="dropdown-item black-text" href="consultaPedidos.html">Pedidos</a></li>
                                 <li><a class="dropdown-item black-text" href="consultaVentas.html">Ventas</a></li>
                             </ul>
-                        </li>    
+                        </li>
                         <li class="nav-item">
-                          <a class="nav-link active" href="index.html?accion=2" tabindex="-1" aria-disabled="true">Cerrar Sesión</a>
-                      </li>                
-                    </ul>                   
-                    <form class="d-flex" id="formularioBusqueda" action="busquedaServlet" method="POST">
-                        <input class="form-control me-2" id="inputBuscador" type="search" placeholder="Escribe algo..." aria-label="Search" required>
-                        <div class="dropdown me-2">
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="filtroBusqueda" data-bs-toggle="dropdown" aria-expanded="false">
-                                Filtro de búsqueda
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="opcionesAvanzadas">
-                                <li>
-                                    <div class="mb-3">
-                                        <label for="precioMin" class="form-label">Precio mínimo</label>
-                                        <input type="text" class="form-control" id="precioMin" placeholder="0">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="precioMax" class="form-label">Precio máximo</label>
-                                        <input type="text" class="form-control" id="precioMax" placeholder="∞">
-                                    </div>
-                                </li>
-                                <li>
-                                    <select class="form-select" id="campoCategoria" aria-label="Categoría">
-                                        <option selected disabled value="">Categorias</option>
-                                    </select>                                        
-                                </li>
-                                <br>
-                                <li>
-                                    <select class="form-select" id="campoEstrellas" aria-label="Calificación">
-                                        <option value="">Calificación</option>
-                                        <option value="1">1 Estrella</option>
-                                        <option value="2">2 Estrellas</option>
-                                        <option value="3">3 Estrellas</option>
-                                        <option value="4">4 Estrellas</option>
-                                        <option value="5">5 Estrellas</option>
-                                    </select>
-                                </li>
-                                <br>
-                                <!-- <li>
-                                    <select class="form-select" id="campoPopular" aria-label="Más o Menos Vendidos">
-                                        <option value="">Ventas</option>
-                                        <option value="mas-vendidos">Más Vendidos</option>
-                                        <option value="menos-vendidos">Menos Vendidos</option>
-                                    </select>
-                                </li> -->
-                            </ul>
-                        </div>
-                        <button id="btnBuscar" type="submit">Buscar</button>                      
-                    </form>     
+                            <a class="nav-link active" href="index.html?accion=2" tabindex="-1" aria-disabled="true">Cerrar Sesión</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>

@@ -5,55 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">        
         <title>Consultar lista</title>        
         <link rel="stylesheet" href="css/bootstrap.min.css">  
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
         <link rel="stylesheet" href="css/navbarFooter.css">
         <link rel="stylesheet" href="css/estilosListas.css">
    </head>
    <body id="idFondo">        
-        <div id="idNav">
-            <nav class="navbar navbar-expand-lg navbar-light shadow-lg p-3 mb-5 fixed-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" id="enlaceTitular" href="dashboard.html">Dashboard</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="crearPublicacion.html">Crear Publicación</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="pago.html">Carrito</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="PerfilPublico.html">Mi Perfil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="cotizacion.html">Cotización</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="aprobacionProductos.html">Revision de Articulos</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle black-text" href="#" id="filtroBusqueda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Consultas
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="filtroBusqueda">
-                                    <li><a class="dropdown-item black-text" href="consultaPedidos.html">Pedidos</a></li>
-                                    <li><a class="dropdown-item black-text" href="consultaVentas.html">Ventas</a></li>
-                                </ul>
-                            </li>    
-                            <li class="nav-item">
-                                <a class="nav-link active" href="index.html?accion=2" tabindex="-1" aria-disabled="true">Cerrar Sesión</a>
-                            </li>                
-                        </ul>                   
+    <div id="idNav">
+        <nav class="navbar navbar-expand-lg navbar-light shadow-lg p-3 mb-5 fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" id="enlaceTitular" href="dashboard.html">Dashboard</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="mx-auto d-flex flex-grow-1 justify-content-center">
                         <form class="d-flex" id="formularioBusqueda" action="busquedaServlet" method="POST">
                             <input class="form-control me-2" id="inputBuscador" type="search" placeholder="Escribe algo..." aria-label="Search" required>
                             <div class="dropdown me-2">
                                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="filtroBusqueda" data-bs-toggle="dropdown" aria-expanded="false">
                                     Filtro de búsqueda
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="opcionesAvanzadas">
+                                <ul class="dropdown-menu" aria-labelledby="filtroBusqueda">
                                     <li>
                                         <div class="mb-3">
                                             <label for="precioMin" class="form-label">Precio mínimo</label>
@@ -66,8 +37,8 @@
                                     </li>
                                     <li>
                                         <select class="form-select" id="campoCategoria" aria-label="Categoría">
-                                            <option selected disabled value="">Categorias</option>
-                                        </select>                                        
+                                            <option selected disabled value="">Categorías</option>
+                                        </select>
                                     </li>
                                     <br>
                                     <li>
@@ -90,12 +61,42 @@
                                     </li> -->
                                 </ul>
                             </div>
-                            <button id="btnBuscar" type="submit">Buscar</button>                      
-                        </form>     
+                            <button id="btnBuscar" type="submit">Buscar</button>
+                        </form>
                     </div>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="crearPublicacion.html">Crear Publicación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pago.html">Carrito</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="PerfilPublico.html">Mi Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cotizacion.html">Cotización</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aprobacionProductos.html">Revisión de Artículos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="filtroBusqueda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Consultas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="filtroBusqueda">
+                                <li><a class="dropdown-item" href="consultaPedidos.html">Pedidos</a></li>
+                                <li><a class="dropdown-item" href="consultaVentas.html">Ventas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html?accion=2" tabindex="-1" aria-disabled="true">Cerrar Sesión</a>
+                        </li>
+                    </ul>   
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
+    </div>
         <br>
         <br>
         <form action="listaServlet" method="POST" class="container" id="formLista">

@@ -94,7 +94,7 @@ h1{
 }
 
 #idFin {
-    position: relative;
+    position: flex;
 }
 
 #idDivListas {
