@@ -1,6 +1,6 @@
   body {
-    background-image: url("../recursos/mobile-phone-represent-of-front-of-shop-store-shopping-online-on-website-or-mobile-application-concept-marketing-and-digital-marketing-free-vector.jpg");
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
+    background-image: url("../recursos/fondo_login.jpg");
+    background-size: 80%; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
   }
@@ -12,13 +12,6 @@
     padding: 20px 20px 10px 20px;
     width: 100%;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  }
-  
-  #idFondo {
-    background-color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
   #idContenido {
