@@ -4,56 +4,27 @@
        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
        <meta name="viewport" content="width=device-width, initial-scale=1">        
        <title>Crear publicación</title>        
-       <link rel="stylesheet" href="css/bootstrap.min.css"> 
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
+       <link rel="stylesheet" href="css/bootstrap.min.css">
        <link rel="stylesheet" href="css/navbarFooter.css"> 
        <link rel="stylesheet" href="css/estilosCrearPublicacion.css">          
    </head>
     <body id="idFondo">        
         <div id="idNav">
-            <nav class="navbar navbar-expand-lg navbar-light shadow-lg p-3 mb-5 fixed-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" id="enlaceTitular" href="dashboard.html">Dashboard</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="crearPublicacion.html">Crear Publicación</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="pago.html">Carrito</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="PerfilPublico.html">Mi Perfil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="cotizacion.html">Cotización</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="aprobacionProductos.html">Revision de Articulos</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle black-text" href="#" id="filtroBusqueda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Consultas
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="filtroBusqueda">
-                                    <li><a class="dropdown-item black-text" href="consultaPedidos.html">Pedidos</a></li>
-                                    <li><a class="dropdown-item black-text" href="consultaVentas.html">Ventas</a></li>
-                                </ul>
-                            </li>    
-                            <li class="nav-item">
-                                <a class="nav-link active" href="index.html?accion=2" tabindex="-1" aria-disabled="true">Cerrar Sesión</a>
-                            </li>                
-                        </ul>                   
+        <nav class="navbar navbar-expand-lg navbar-light shadow-lg p-3 mb-5 fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" id="enlaceTitular" href="dashboard.html">Dashboard</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="mx-auto d-flex flex-grow-1 justify-content-center">
                         <form class="d-flex" id="formularioBusqueda" action="busquedaServlet" method="POST">
                             <input class="form-control me-2" id="inputBuscador" type="search" placeholder="Escribe algo..." aria-label="Search" required>
                             <div class="dropdown me-2">
                                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="filtroBusqueda" data-bs-toggle="dropdown" aria-expanded="false">
                                     Filtro de búsqueda
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="opcionesAvanzadas">
+                                <ul class="dropdown-menu" aria-labelledby="filtroBusqueda">
                                     <li>
                                         <div class="mb-3">
                                             <label for="precioMin" class="form-label">Precio mínimo</label>
@@ -66,8 +37,8 @@
                                     </li>
                                     <li>
                                         <select class="form-select" id="campoCategoria" aria-label="Categoría">
-                                            <option selected disabled value="">Categorias</option>
-                                        </select>                                        
+                                            <option selected disabled value="">Categorías</option>
+                                        </select>
                                     </li>
                                     <br>
                                     <li>
@@ -90,19 +61,49 @@
                                     </li> -->
                                 </ul>
                             </div>
-                            <button id="btnBuscar" type="submit">Buscar</button>                      
-                        </form>     
+                            <button id="btnBuscar" type="submit">Buscar</button>
+                        </form>
                     </div>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="crearPublicacion.html">Crear Publicación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pago.html">Carrito</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="PerfilPublico.html">Mi Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cotizacion.html">Cotización</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aprobacionProductos.html">Revisión de Artículos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="filtroBusqueda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Consultas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="filtroBusqueda">
+                                <li><a class="dropdown-item" href="consultaPedidos.html">Pedidos</a></li>
+                                <li><a class="dropdown-item" href="consultaVentas.html">Ventas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html?accion=2" tabindex="-1" aria-disabled="true">Cerrar Sesión</a>
+                        </li>
+                    </ul>   
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
+    </div>
        <div class="container" id="idContenido">
             <h1 class="text-center">Nueva Publicación</h1>
             <form id="formNuevaPublicacion" action="nuevaPublicacionServlet" method="POST" enctype="multipart/form-data">
                 <div class="container"> 
+
                     <!--Carrusel-->
                     <input type="file" accept="image/*" id="btnCargaImagen">
-                    <button type="button" class="btn btn-danger mt-2" id="btnEliminarImagen">Eliminar Imagen</button>
 
                     <div id="carrusel" class="carousel slide" data-ride="carousel">
                         
@@ -120,8 +121,11 @@
                         </a>
 
                     </div>
+                    <button type="button" class="btn btn-danger mt-2" id="btnEliminarImagen">Eliminar Imagen</button>
+
                 </div>
                 <br>
+
                 <!--Nombre--> 
                 <div class="row">
                     <div class="col">
@@ -145,7 +149,7 @@
                 <div class="container mt-5"> 
                     <!--Carrusel-->
                     <input type="file" accept="video/*" id="btnCargaVideo">
-                    <button type="button" class="btn btn-danger mt-2" id="btnEliminarVideo">Eliminar Video</button>
+                    
 
                     <div id="carruselVideo" class="carousel slide" data-ride="carousel">
                         
@@ -163,6 +167,8 @@
                         </a>
 
                     </div>
+
+                    <button type="button" class="btn btn-danger mt-2" id="btnEliminarVideo">Eliminar Video</button>
                 </div>
 
                 <!--Categoria-->
@@ -185,32 +191,30 @@
                         
                     </div>
                 </div>
-
                 <label for="opcionesModo" class="form-label mt-4">Venta o Cotización</label>
                 <br>
                 <input type="radio" class="btn-check" name="opcionesModo" id="opcionVenta" autocomplete="off" checked>
                 <label class="btn btn-secondary" for="opcionVenta">Venta</label>
-
                 <input type="radio" class="btn-check" name="opcionesModo" id="opcionCotizacion" autocomplete="off">
                 <label class="btn btn-secondary" for="opcionCotizacion">Cotización</label>  
-
-                <!--Precio-->
-                <div class="col">
-                    <label for="cost">Precio</label>
-                    <input type="text" id="campoPrecio" class="form-control" placeholder="Escribe un precio para el producto" required>
+                <!-- Precio y Cantidad en la misma fila -->
+                 <div class="row mt-4">
+                    <div class="col-md-6">
+                        <label for="cost">Precio</label>
+                        <input type="text" id="campoPrecio" class="form-control" placeholder="Escribe un precio para el producto" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="cost">Cantidad Disponible</label>
+                        <input type="number" id="campoCantidad" class="form-control" placeholder="Escribe el número de unidades disponibles" required>
+                    </div>
                 </div>
-                <!--Inventario-->
-                <div class="col">
-                    <label for="cost">Cantidad Disponible</label>
-                    <input type="number" id="campoCantidad" class="form-control" placeholder="Escribe el número de unidades disponibles" required>
-                </div>
-                <hr> <!-- Separador -->	
-                <!--Boton-->
-                <div class="text-center">
+                <hr> <!-- Separador -->    
+                <!-- Boton -->
+                 <div class="text-center">
                     <div class="col-12">                            
                         <div class="text-center">
                             <div class="col-12">
-                            <button class="btn btn-primary" type="submit">Crear publicación</button>
+                                <button class="btn btn-primary" type="submit">Crear publicación</button>
                             </div>
                         </div>                       
                     </div>

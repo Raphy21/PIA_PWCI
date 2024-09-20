@@ -1,74 +1,83 @@
 .navbar {
-    background-color: #1d8c76;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.seccion-perfil-usuario {
-    flex: 1;
-}
-
-#formularioBusqueda {
-    margin: 10px 0;
-}
-
-#inputBuscador {
-    border: 2px solid lightblue;
-    border-radius: 10px;
-    padding: 5px 10px;
-}
-#inputBuscador:focus {
-    outline: none;
-    box-shadow: none;
-    border: 2px solid lightblue;
-}
-
-#btnBuscar {
-    background-color: #007BFF;
-    color: white;
-    border: 1px solid lightblue;
-    border-radius: 10px;
-    padding: 5px 20px;
-    cursor: pointer;
-}
-#btnBuscar:hover {
-    background-color: #0162c9;
-    color: white;
-}
-
-.dropdown-menu{
-    padding: 10px;
+    background-color: #24a38c;
 }
 
 #enlaceTitular {
     color: white;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 24px;
+    text-decoration: none;
 }
 
-.navbar-nav a {
-    color: white !important;
-}
-.navbar-nav a:hover {
-    color: #cbcbcb !important;
+
+.navbar-nav .nav-link {
+    color: white; 
+    font-weight: bold;
+    transition: color 0.3s ease; 
 }
 
-#filtroBusqueda {
-    color: White;
-    border: 1px solid lightblue;
-    background-color: #3498db;
+
+.navbar-nav .nav-link:hover {
+    color: #11772d;
 }
+
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: white; 
+}
+
+
+.navbar-light .navbar-nav .nav-link.active:hover {
+    color: #11772d;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+
+#inputBuscador {
+    width: 300px; 
+    max-width: 100%; 
+    padding: 8px 50px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+
+#btnBuscar {
+    background-color: #30ad23;
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+#btnBuscar:hover {
+    background-color: #11772d;
+}
+
+.dropdown-menu {
+    background-color: white;
+}
+
+.dropdown-menu .dropdown-item {
+    color: black;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #30ad23;
+}
+
 
 #idFin {
     
-    position: fixed;
+    position: relative;
     background-color: #1d8c76;
     color: white;
     text-align: center;
@@ -77,9 +86,10 @@ body{
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     position: fixed;
     bottom: 0;
+    flex: 1;
   }
 
- /* Estilos para cambiar el color del texto de "Compras" y "Ventas" a negro */
+ 
 .dropdown-menu .black-text {
     color: black !important;
 }

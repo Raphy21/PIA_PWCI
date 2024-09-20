@@ -3,7 +3,7 @@
     text-align: center;
 }
 #idCarrusel h1 {
-    color: #014978;
+    color: #30ad23;
     font-weight: bold;
     font-size: 45px;
     margin-bottom: 20px;
@@ -18,7 +18,7 @@
 .btn-ver-producto a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #24a38c;
     color: #ffffff;
     text-decoration: none;
     border: none;
@@ -26,7 +26,7 @@
     cursor: pointer;
 }
 .btn-ver-producto a:hover {
-    background-color: #0162c9;
+    background-color: #1d8c76;
     color: #ffffff;
 }
 
@@ -35,7 +35,7 @@
     text-align: center;
 }
 #idEstanteriaInteres h2 {
-    color: #014978;
+    color: #30ad23;
     font-weight: bold;
     font-size: 35px;
     margin-bottom: 20px;
@@ -64,7 +64,7 @@
 .btn-conocer-mas button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #24a38c;
     color: #ffffff;
     text-decoration: none;
     border: none;
@@ -72,7 +72,7 @@
     cursor: pointer;
 }
 .btn-conocer-mas button:hover {
-    background-color: #2882be;
+    background-color: #1d8c76;
     color: #ffffff;
 }
 
@@ -82,11 +82,3 @@
     font-weight: bold;
 }
 
-#idFin {
-    background-color: #014978;
-    color: white;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  }

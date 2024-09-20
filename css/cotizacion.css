@@ -1,65 +1,109 @@
+
 body {
-    color: #404040;
-    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  padding-top: 70px;
 }
 
-h1{
-  color: #014978;
-    font-weight: bold;
-    font-size: 45px;
-    margin-bottom: 30px;
-    text-align: center;
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #24a38c;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.container .btn{
-  margin-top: 10px;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.seccion-perfil-usuario {
-    flex: 1;
-}
-
-#chat-container {
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  border: 1px solid #ccc;
-  padding: 10px;
-  overflow-y: scroll;
-  height: 400px;
-}
-.mensaje {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-}
-.mensaje-emisor {
-  background-color: #d1e7dd;
-  margin-left: auto;
-  max-width: 50%;
-  text-align: right;
-}
-.mensaje-receptor {
-  background-color: #f8d7da;
-  margin-right: auto;
-  max-width: 50%;
-  text-align: left;
-}
-.mensaje-contenido {
+.row {
   display: flex;
-  flex-direction: column;
-}
-.mensaje p {
-  margin: 0;
-}
-.mensaje small {
-  color: #999;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-  #idFin{
-    margin-top: 30px;
-    position: fixed;
+#formularioChat,
+#formularioCotizacion {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el chat */
+#chat-container {
+  background-color: #e9f5f3;
+  border-radius: 8px;
+  height: 400px;
+  overflow-y: scroll;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+#messageInput {
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#sendMessageBtn {
+  background-color: #24a38c;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#sendMessageBtn:hover {
+  background-color: #1b7d6a;
+}
+
+/* Estilos del formulario de cotización */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: #24a38c;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #1b7d6a;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column;
   }
+
+  #formularioChat, #formularioCotizacion {
+      width: 100%;
+  }
+}
