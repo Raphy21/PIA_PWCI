@@ -23,41 +23,34 @@ h1{
 }
 
 #chat-container {
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
   border: 1px solid #ccc;
   padding: 10px;
-  overflow-y: scroll;
-  height: 400px;
-}
-.mensaje {
-  padding: 10px;
+  height: 300px; /* Ajusta según lo necesario */
+  overflow-y: auto; /* Permite el desplazamiento si hay muchos mensajes */
   margin-bottom: 10px;
+}
+
+.bubble {
+  max-width: 60%;
+  padding: 10px;
   border-radius: 10px;
+  margin: 5px;
 }
-.mensaje-emisor {
-  background-color: #d1e7dd;
-  margin-left: auto;
-  max-width: 50%;
-  text-align: right;
+
+.bubble-right {
+  background-color: #0084ff; /* Color de fondo para mensajes enviados */
+  color: white;
+  float: right; /* Alínea a la derecha */
+  clear: both; /* Asegura que las burbujas no se superpongan */
 }
-.mensaje-receptor {
-  background-color: #f8d7da;
-  margin-right: auto;
-  max-width: 50%;
-  text-align: left;
+
+.bubble-left {
+  background-color: #f1f1f1; /* Color de fondo para mensajes recibidos */
+  color: black;
+  float: left; /* Alínea a la izquierda */
+  clear: both; /* Asegura que las burbujas no se superpongan */
 }
-.mensaje-contenido {
-  display: flex;
-  flex-direction: column;
-}
-.mensaje p {
-  margin: 0;
-}
-.mensaje small {
-  color: #999;
-}
+
 
   #idFin{
     margin-top: 30px;
