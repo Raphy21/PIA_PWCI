@@ -6,7 +6,7 @@ $host = "localhost";
 $baseDatos = "Proyecto_BDM";
 $usuario = "root";
 $contrasena = "";
-$puerto = "3307";
+$puerto = "3306";
 
 // Crear conexión
 $conn = new mysqli($host, $usuario, $contrasena, $baseDatos, $puerto);

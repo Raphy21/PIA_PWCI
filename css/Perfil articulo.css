@@ -126,7 +126,7 @@ Copiar esto
     flex-wrap: wrap;
     padding: 1.5rem 2rem;
     box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-    background-color: #24b9de;
+    background-color: #2bc3a6;
     border-radius: 15px;
     width: 100%;
 }
@@ -241,4 +241,9 @@ Copiar esto
     text-align: center;
     font-size: 18px;
     font-weight: bold;
+}
+
+.carousel-item img {
+    object-fit: cover; /* O "contain" dependiendo del efecto deseado */
+    height: 360px; /* Ajusta la altura según tu diseño */
 }
