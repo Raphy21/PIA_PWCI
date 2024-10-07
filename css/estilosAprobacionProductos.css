@@ -8,6 +8,10 @@ h1 {
     font-weight: bold;
 }
 
+.container{
+flex: 1;
+}
+
 #contenedorPrincipal {
     text-align: center;
     margin-top: 120px;

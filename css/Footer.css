@@ -1,0 +1,26 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0; 
+}
+
+
+/* Estilos para el footer */
+#idFin {
+    background-color: #6A1B9A;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+}
+
+  
+    @media (max-width: 768px) {
+      #idFin {
+          position: relative;
+      }
+  }

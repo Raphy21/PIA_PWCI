@@ -3,24 +3,6 @@ body{
     flex-direction: column;
 }
 
-#idInicio{
-    background-color: #3498db;
-    color: white;   
-    text-align: center;
-    padding: 20px 20px 10px 8px;
-    width: 100%;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-}
-
-
-#idFin{
-    background-color: #014978;
-    color: white;   
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-}
 
 #idFondo{
     background-color: aliceblue;
@@ -93,9 +75,6 @@ h1{
     margin-bottom: 20px;
 }
 
-#idFin {
-    position: relative;
-}
 
 #idDivListas {
     background-color: rgb(235, 245, 255);

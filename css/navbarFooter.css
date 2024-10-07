@@ -66,19 +66,3 @@ body{
     background-color: #3498db;
 }
 
-#idFin {
-    position: relative;
-    background-color: #014978;
-    color: white;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    position: fixed;
-    bottom: 0;
-  }
-
- /* Estilos para cambiar el color del texto de "Compras" y "Ventas" a negro */
-.dropdown-menu .black-text {
-    color: black !important;
-}
