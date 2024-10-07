@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 }
 
 // Consultar la lista de usuarios y correos electrónicos
-$sql = "SELECT correo, pass FROM registro";
+$sql = "SELECT correo, pass FROM registroUsuario";
 $result = $conn->query($sql);
 
 $usuarios = array();
