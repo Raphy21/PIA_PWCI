@@ -14,6 +14,10 @@ h1{
     text-align: center;
 }
 
+.container{
+  flex: 1;
+}
+
 .container .btn{
   margin-top: 10px;
 }

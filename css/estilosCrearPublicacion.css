@@ -5,6 +5,10 @@ body{
     min-height: 100vh;
 }
 
+.container{
+    flex: 1;
+}
+
 #idInicio{
     background-color: #3498db;
     color: white;   

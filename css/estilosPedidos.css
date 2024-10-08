@@ -3,8 +3,13 @@ h1{
     color: #014978;
     font-weight: bold;
     font-size: 45px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-align: center;
+}
+
+.container{
+    flex: 1;
+    margin-top: 50px;
 }
 
 #consulta-form button{
