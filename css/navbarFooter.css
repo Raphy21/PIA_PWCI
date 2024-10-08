@@ -1,68 +1,94 @@
 .navbar {
-    background-color: #3498db;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.seccion-perfil-usuario {
-    flex: 1;
-}
-
-#formularioBusqueda {
-    margin: 10px 0;
-}
-
-#inputBuscador {
-    border: 2px solid lightblue;
-    border-radius: 10px;
-    padding: 5px 10px;
-}
-#inputBuscador:focus {
-    outline: none;
-    box-shadow: none;
-    border: 2px solid lightblue;
-}
-
-#btnBuscar {
-    background-color: #007BFF;
-    color: white;
-    border: 1px solid lightblue;
-    border-radius: 10px;
-    padding: 5px 20px;
-    cursor: pointer;
-}
-#btnBuscar:hover {
-    background-color: #0162c9;
-    color: white;
-}
-
-.dropdown-menu{
-    padding: 10px;
+    background-color: #24a38c;
 }
 
 #enlaceTitular {
     color: white;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 24px;
+    text-decoration: none;
 }
 
-.navbar-nav a {
-    color: white !important;
+
+.navbar-nav .nav-link {
+    color: white; 
+    font-weight: bold;
+    transition: color 0.3s ease; 
 }
-.navbar-nav a:hover {
-    color: #cbcbcb !important;
+
+
+.navbar-nav .nav-link:hover {
+    color: #11772d;
+}
+
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: white; 
+}
+
+
+.navbar-light .navbar-nav .nav-link.active:hover {
+    color: #11772d;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+
+#inputBuscador {
+    width: 300px; 
+    max-width: 100%; 
+    padding: 8px 50px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+
+#btnBuscar {
+    background-color: #28b392;
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+#btnBuscar:hover {
+    background-color: #1e8f75;
+}
+
+.dropdown-menu {
+    background-color: white; /* Fondo blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.dropdown-item {
+    color: black; /* Texto negro */
+    padding: 10px 20px; /* Ajusta el espaciado */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.dropdown-item:hover {
+    background-color: #24a38c; /* Fondo verde al hacer hover */
+    color: white; /* Texto blanco */
 }
 
 #filtroBusqueda {
-    color: White;
-    border: 1px solid lightblue;
-    background-color: #3498db;
+    background-color: #28b392; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 8px 16px; /* Ajusta el espaciado */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano */
+    transition: background-color 0.3s ease; /* Transición suave al hacer hover */
 }
 
+#filtroBusqueda:hover {
+    background-color: #1e8f75; /* Color más oscuro al hacer hover */
+}

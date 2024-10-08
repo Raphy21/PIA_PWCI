@@ -57,15 +57,15 @@ body{
 }
 
 .form-check label.btn {
-    background-color: #007BFF;
+    background-color: #24a38c;
     color: white;
     cursor: pointer;
 }
 .form-check label.btn:hover {
-    background-color: #0162c9;
+    background-color: #1e8f75;
 }
 .form-check input[type="radio"]:checked + label.btn {
-    background-color: #0162c9;
+    background-color: #24a38c;
 }
 
 h1{
@@ -127,7 +127,7 @@ h1{
 #btnAtras {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #24a38c;
     color: #ffffff;
     text-decoration: none;
     border: none;
@@ -135,13 +135,13 @@ h1{
     cursor: pointer;
 }
 #btnAtras:hover {
-    background-color: #2882be;
+    background-color: #1e8f75;
 }
 
 #btnSiguiente {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #24a38c;
     color: #ffffff;
     text-decoration: none;
     border: none;
@@ -149,7 +149,7 @@ h1{
     cursor: pointer;
 }
 #btnSiguiente:hover {
-    background-color: #0162c9;
+    background-color: #1e8f75;
 }
 
 #contenedorPrincipal {
@@ -162,7 +162,7 @@ h1{
     display: inline-block;
     padding: 10px 20px;
     margin: 0 20px;
-    background-color: #007BFF;
+    background-color: #24a38c;
     color: #ffffff;
     text-decoration: none;
     border: none;
@@ -171,5 +171,24 @@ h1{
     font-size: 14px;
 }
 #enlaceProducto:hover {
-    background-color: #0162c9;
+    background-color: #1e8f75;
+}
+
+.btn-custom {
+    background-color: #24a38c; 
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    background-color: #1e8f75; 
+}
+
+.btn-custom:focus {
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
 }
