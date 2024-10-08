@@ -53,11 +53,14 @@ function validarFormulario(event) {
         mensajesError.push("El nombre de usuario debe tener al menos 3 caracteres.");
 
     //Validar el formato de la contraseña mediante una expresión regular
-    let contrasena = document.getElementById('campoContrasena').value;
-    let expresionRegular = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!\"#\$%&/='?¡¿:;,.\\-_+*{\[\]}]).{8,}$/;
-    if (!expresionRegular.test(contrasena))
-        mensajesError.push("La contraseña no cumple con el formato de al menos 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial.");
-
+    if(document.getElementById('campoContrasena1').value === document.getElementById('campoContrasena').value){
+        let contrasena = document.getElementById('campoContrasena').value;
+        let expresionRegular = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!\"#\$%&/='?¡¿:;,.\\-_+*{\[\]}]).{8,}$/;
+        if (!expresionRegular.test(contrasena))
+            mensajesError.push("La contraseña no cumple con el formato de al menos 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial.");
+    }else{
+        mensajesError.push("Las contraseñas no coinciden");
+    }
     //Si se detectaron errores, mostrarlos
     if (mensajesError.length > 0) {
 
