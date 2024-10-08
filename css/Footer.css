@@ -9,11 +9,11 @@ body {
 
 /* Estilos para el footer */
 #idFin {
-    background-color: #6A1B9A;
+    background-color: #1d8c76;
     color: white;
     text-align: center;
     width: 100%;
-    padding: 20px;
+    padding: 5px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     font-size: 15px;
 }

@@ -9,19 +9,19 @@ body{
     flex: 1;
 }
 
-/* Estilos generales para el header */
+
 #idInicio {
-    background-color: #24a38c; /* Verde elegante */
+    background-color: #24a38c; 
     color: white;
     padding: 15px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-bottom: 3px solid #1c8070;
-    position: fixed; /* Asegura que el header esté fijo */
-    top: 0; /* Se coloca en la parte superior */
-    left: 0; /* Se alinea a la izquierda */
-    right: 0; /* Se alinea a la derecha */
-    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1000; 
 }
 
 /* Flexbox para el nav */
@@ -111,16 +111,36 @@ body{
 }
 
 .form-check label.btn {
-    background-color: #007BFF;
+    background-color: #24a38c;
     color: white;
     cursor: pointer;
 }
 .form-check label.btn:hover {
-    background-color: #0162c9;
+    background-color: #136659;
 }
 .form-check input[type="radio"]:checked + label.btn {
-    background-color: #0162c9;
+    background-color: #136659;
 }
+
+.btn-custom {
+    background-color: #24a38c; 
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    background-color: #1e8f75; 
+}
+
+.btn-custom:focus {
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+}
+
 
 #idFin {
     position: relative;
