@@ -8,7 +8,7 @@ h1 {
     font-weight: bold;
 }
 
-.container{
+.container {
     flex: 1;
 }
 
@@ -21,23 +21,46 @@ h1 {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Cambiado a 'center' para centrar las tarjetas */
+    gap: 20px; /* Espacio entre tarjetas */
 }
 
 .card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    width: 200px;
+    height: 300px; /* Altura fija o un 'min-height' según necesites */
+    width: 200px; /* Ancho fijo */
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    border: 1px solid #ccc; /* Para que las tarjetas tengan un borde */
+    border-radius: 5px; /* Bordes redondeados */
+    display: flex; /* Para que contenga el contenido */
+    flex-direction: column; /* Para alinear el contenido verticalmente */
 }
 
-.card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
+.card-body {
+    flex: 1; /* Esto permite que el cuerpo ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa; /* Fondo claro para resaltar el color */
+    border: 2px solid #24a38c; /* Borde con el color especificado */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
 }
+
+.card-title, .card-text {
+    flex-grow: 1; /* Para que el texto ocupe el espacio disponible */
+    text-align: center; /* Centrar el texto */
+    color: #24a38c; /* Color del texto en el título y el texto */
+}
+
+.card-body img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px; /* Para que las imágenes también tengan bordes redondeados */
+}
+
 
 #button-container {
     margin-top: 20px;

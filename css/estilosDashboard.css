@@ -52,30 +52,37 @@ html, body {
     margin-bottom: 20px;
 }
 
-.card {
-    height: 100%;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
-}
 .card-body {
-    height: 100%;
+    flex: 1; /* Esto permite que el cuerpo ocupe el espacio restante */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-color: #f8f9fa; /* Fondo claro para resaltar el color */
+    border: 2px solid #24a38c; /* Borde con el color especificado */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
 }
+
 .card-title, .card-text {
-    flex-grow: 1;
+    flex-grow: 1; /* Para que el texto ocupe el espacio disponible */
+    text-align: center; /* Centrar el texto */
+    color: #24a38c; /* Color del texto en el título y el texto */
 }
+
 .card-body img {
     width: 70%;
     height: auto;
     object-fit: cover;
+    border-radius: 5px; /* Para que las imágenes también tengan bordes redondeados */
 }
+
 
 .btn-conocer-mas button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #24a38c;
     color: #ffffff;
     text-decoration: none;
     border: none;
@@ -83,7 +90,7 @@ html, body {
     cursor: pointer;
 }
 .btn-conocer-mas button:hover {
-    background-color: #2882be;
+    background-color: #1d8c76;
     color: #ffffff;
 }
 
