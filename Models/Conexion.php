@@ -1,11 +1,11 @@
 <?php
 class Conexion {
     //Atributos
-    private $host = "localhost";
-    private $baseDatos = "Proyecto_BDM";
-    private $usuario = "root";
-    private $contrasena = "";
-    private $puerto = "3307";
+    private $host = "s9xpbd61ok2i7drv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+    private $baseDatos = "omggy318wf15rtc3";
+    private $usuario = "w61uabsrpaswba47";
+    private $contrasena = "zgug8l6g0pj2cwrn";
+    private $puerto = "3306";
     
     private static $instancia = null;
     private $conexionAbierta = null;
