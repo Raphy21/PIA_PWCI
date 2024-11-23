@@ -90,7 +90,7 @@ function iniciarSesionAutomaticamente(idUsuario) {
     //Mandar una petición AJAX al servidor para iniciar la sesión automáticamente
     $.ajax({
         type: "POST",
-        url: "/API/api.php/api/usuarios/login",
+        url: "https://pia-pwci-bf9e4b77cf71.herokuapp.com/API/api.php/api/usuarios/login",
         data: datos,
         contentType: false,
         processData: false,
