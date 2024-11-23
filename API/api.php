@@ -1,9 +1,9 @@
 <?php
-define('BaseAPI', '/API/api.php');
-
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
+define('BaseAPI', '/API/api.php');
 
 include_once '../Controllers/RegistroController.php';
 include_once '../Controllers/LoginController.php';

@@ -107,7 +107,7 @@ function validarFormulario(event) {
         //Mandar una petición AJAX al servidor con los datos del formulario
         $.ajax({
             type: "POST",
-            url: "https://pia-pwci.herokuapp.com/API/api.php/api/usuarios/registro",
+            url: "https://pia-pwci.herokuapp.com/API/api.php/usuarios/registro",
             data: datosFormulario,
             contentType: false,
             processData: false,
