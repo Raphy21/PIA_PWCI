@@ -16,6 +16,11 @@ include_once '../Controllers/PaginaProductoController.php';
 include_once '../Controllers/NuevaListaController.php';
 include_once '../Controllers/EditarListaController.php';
 
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    header("HTTP/1.1 204 No Content");
+    exit(0); // Salir para no procesar más lógica
+}
+
 //Obtener el endpoint de la solicitud
 $endpoint = $_SERVER['REQUEST_URI'];
 
