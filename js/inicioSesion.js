@@ -41,7 +41,7 @@ function validarFormulario(event) {
     //Mandar una petición AJAX al servidor con los datos del formulario
     $.ajax({
         type: "POST",
-        url: "API/api.php/api/usuarios/login",
+        url: "/API/api.php/api/usuarios/login",
         data: datosFormulario,
         contentType: false,
         processData: false,
@@ -90,7 +90,7 @@ function iniciarSesionAutomaticamente(idUsuario) {
     //Mandar una petición AJAX al servidor para iniciar la sesión automáticamente
     $.ajax({
         type: "POST",
-        url: "API/api.php/api/usuarios/login",
+        url: "/API/api.php/api/usuarios/login",
         data: datos,
         contentType: false,
         processData: false,
