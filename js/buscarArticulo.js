@@ -87,7 +87,6 @@ function validarFormularioBusqueda(event) {
                             IdAdminAprobador: mensaje.IdAdminAprobador,
                             categoria: mensaje.categoria,
                             imagen: mensaje.imagenesProducto,
-                            video: mensaje.videosProducto
                         });
                     });
                 }

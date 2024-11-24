@@ -459,34 +459,33 @@ function renderizarMensajes() {
 
   // Recorrer los mensajes en orden ascendente para que los mensajes más recientes estén en la parte inferior
   for (let i = 0; i < mensajesArray.length; i++) {
-      const mensaje = mensajesArray[i];
-      const mensajeElemento = document.createElement('div');
-      mensajeElemento.classList.add('mensaje');
+    const mensaje = mensajesArray[i];
+    const mensajeElemento = document.createElement('div');
+    mensajeElemento.classList.add('bubble');
 
-      // Convertir mensaje.IdEmisor a número entero para comparación
-      const idEmisor = parseInt(mensaje.IdEmisor);
+    // Determinar si el mensaje es enviado o recibido
+    const idEmisor = parseInt(mensaje.IdEmisor);
+    if (idEmisor === usuarioActual) {
+      mensajeElemento.classList.add('bubble-right'); // Mensaje enviado
+    } else {
+      mensajeElemento.classList.add('bubble-left'); // Mensaje recibido
+    }
 
-      if (idEmisor === usuarioActual) {
-          mensajeElemento.classList.add('mensaje-emisor');
-      } else {
-          mensajeElemento.classList.add('mensaje-receptor');
-      }
+    // Agregar contenido al mensaje
+    const contenidoMensaje = `
+      <p>${mensaje.Contenido}</p>
+      <small>${mensaje.FechaHora}</small>
+    `;
+    mensajeElemento.innerHTML = contenidoMensaje;
 
-      const contenidoMensaje = `
-          <div class="mensaje-contenido">
-              <p>${mensaje.Contenido}</p>
-              <small>${mensaje.FechaHora}</small>
-          </div>
-      `;
-      mensajeElemento.innerHTML = contenidoMensaje;
-
-      // Agregar el mensaje al inicio del contenedor
-      chatContainer.appendChild(mensajeElemento);
+    // Agregar el mensaje al contenedor
+    chatContainer.appendChild(mensajeElemento);
   }
 
   // Desplazar automáticamente hacia abajo para mostrar los mensajes más recientes
   chatContainer.scrollTop = chatContainer.scrollHeight;
 }
+
   
   document.getElementById('formularioCotizacion').addEventListener('submit', function(event) {
     event.preventDefault();
